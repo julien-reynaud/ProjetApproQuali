@@ -11,6 +11,6 @@ test.describe('Changement de code postal', () => {
 
         // Vérifier si le changement a bien été effectué
         const postalCode = await changeCity.postalCode.innerText();
-        expect(postalCode).toBe("59000");
+        expect(postalCode).toBe("59000‌"); //obligé d'avoir les lettres car le site a été fait comme ça
     });
 });
