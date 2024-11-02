@@ -149,18 +149,21 @@ Feature: ‘amazon.fr’ Test Automation using Playwright
 	And I hover "Roman et littérature"
 	And I click on "Poésie"
 	Then I should be redirected to the poetry books category
-
+ 
+### Scénario : Voir le produit le mieux vendu dans le baromètre des ventes, catégorie CD et vinyles
+	Given I navigate to the Amazon homepage
+	And I click on the menu "Toutes"
+	And I click on "Baromètre des ventes"
+	And I click on "CD et Vinyles"
+ 	And I click on the first item
+	Then I should see the best selling item from the "CD et Vinyles" category
+ 
 ### Scénario : Supprimer un article de l'historique de navigation
-	Given I am logged in and at the amazon homepage and I have searched for an article
+	Given I am logged in and at the amazon homepage and I have searched for an article (we use the previous scenario)
 	When I click on the "Account" menu
 	And I click on the button "Historique de navigation"
 	And I click on the button "Supprimer"
 	Then the article should disapear from my history
 
-### Scénario : Voir le baromètre des ventes en animalerie
-	Given I navigate to the Amazon homepage
-	And I click on the menu "Toutes"
-	And I click on "Baromètre des ventes"
-	And I click on "Animalerie"
-	Then I should see the ranking of sold items for pets
+
 	
