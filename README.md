@@ -160,9 +160,11 @@ Feature: ‘amazon.fr’ Test Automation using Playwright
  
 ### Scénario : Supprimer un article de l'historique de navigation
 	Given I am logged in and at the amazon homepage and I have searched for an article (we use the previous scenario)
-	When I click on the "Account" menu
-	And I click on the button "Historique de navigation"
-	And I click on the button "Supprimer"
+	When I hover the "Account" menu
+	And I click on the button "Vos recommandations"
+ 	And I click on the button "Votre historique de navigation"
+	And I click on the icon of the parameter button
+ 	And I click on the button "Retirer des articles"
 	Then the article should disapear from my history
 
 
