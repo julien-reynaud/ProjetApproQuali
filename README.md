@@ -106,15 +106,11 @@ Feature: ‘amazon.fr’ Test Automation using Playwright
   Then I should see the corresponding delivery options for that address 
 
 ## Léo
-### Scenario: Search for a product and complete purchase 
+### Scenario: Search for a product and see the details for one
 	Given I navigate to the Amazon homepage 
 	When I search for "laptop" using the search bar 
 	And I select a product from the search results 
-	And I add the product to the cart 
-	Then I should see the product added to my cart 
-	When I proceed to checkout 
-	And I complete the purchase process 
-	Then I should see a confirmation page for the order 
+	Then I should see the product page  
 
 ### Scenario: Search for a product within a category 
 	Given I navigate to the Amazon homepage 
