@@ -164,7 +164,7 @@ Feature: ‘amazon.fr’ Test Automation using Playwright
 	Then the article should disapear from my history
 
 ## Audren
-### Scénario : Trouver l'Amazon le plus proche => id : NearestLocker
+### Scénario : Trouver l'Amazon Locker le plus proche => id : NearestLocker
 	Given I am on the home page (amazon.fr)
  	And I click on the button to accept cookies 
   	And I click on "Meilleures ventes"
