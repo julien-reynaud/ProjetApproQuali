@@ -163,7 +163,7 @@ Feature: ‘amazon.fr’ Test Automation using Playwright
  	And I click on the button "Retirer des articles"
 	Then the article should disapear from my history
 
-##Audren
+## Audren
 ### Scénario : Trouver l'Amazon le plus proche => id : NearestLocker
 	Given I am on the home page (amazon.fr)
  	And I click on the button to accept cookies 
