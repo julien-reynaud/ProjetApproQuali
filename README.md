@@ -163,5 +163,38 @@ Feature: ‘amazon.fr’ Test Automation using Playwright
  	And I click on the button "Retirer des articles"
 	Then the article should disapear from my history
 
+##Audren
+### Scénario : Trouver l'Amazon le plus proche => id : NearestLocker
+	Given I am on the home page (amazon.fr)
+ 	And I click on the button to accept cookies 
+  	And I click on "Meilleures ventes"
+   	And I click on "Points de retrait Amazon Hub"
+    	And I enter the postal code into the search bar (59000)
+     	And I click on the first postal code recommendation
+      	Then the first Amazon Locker should be "Amazon Locker - Desiree"
 
-	
+### Scénario : Ajouter un article avec une quantité égale à 10 pour voir si dans le panier la bonne quantité a été ajoutée => id : addMultiProduct
+	Given I am on the home page
+ 	And I accept cookies
+  	And I go to the product page
+   	And I modify the quantity to 10
+    	And I add the ten product to my cart
+     	And I click on the cart on top right
+      	Then I check the amount of product in my cart if is equal to 10
+
+### Scénario : vérifier le sous-total des articles dans le panier => id : cartPrice
+	Given I am on the home page
+ 	And I accept coockies 
+  	And I go to the first product page
+   	And I add the first product to the cart 
+    	And I go to the second product page
+     	And I add the second product to the cart
+      	And I go to the cart page
+       	Then the subtotal should be the sum of products in my cart times the quatity of each product
+
+### Scénario : changer la ville de livraison en haut à gauche de la page d'accueil => id : deliveryCity
+	Giver I am on the home page
+ 	And I click on "Mettre à jour l'emplacement"
+  	And I enter the postal code in the input area
+   	And I click on the button "Actualiser"
+    	Then the postal should be write at the place of "Mettre à jour l'emplacement"
