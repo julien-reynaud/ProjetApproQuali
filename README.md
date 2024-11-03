@@ -131,7 +131,7 @@ Feature: ‘amazon.fr’ Test Automation using Playwright
 	Then the total price should be updated accordingly 
 
 ## Julien
-### Scénario : Changer la langue du site en allemand 
+### Scénario : Changer la langue du site en allemand => id : Langue
 	Given I navigate to the Amazon homepage
 	When I hover the language menu
 	And I click on "modifier le pays/la région"
@@ -139,14 +139,14 @@ Feature: ‘amazon.fr’ Test Automation using Playwright
 	And I click on the button "Accéder au site Web"
 	Then I should be redirected to the german website
 
-### Scénario : Rentrer dans la catégorie romans de poésie
+### Scénario : Rentrer dans la catégorie romans de poésie => id : romPoesie
 	Given I navigate to the Amazon homepage
 	When I click on the "Livres" menu	
 	And I hover "Roman et littérature"
 	And I click on "Poésie"
 	Then I should be redirected to the poetry books category
  
-### Scénario : Voir le produit le mieux vendu dans le baromètre des ventes, catégorie CD et vinyles
+### Scénario : Voir le produit le mieux vendu dans le baromètre des ventes, catégorie CD et vinyles => id : baroVentesAnim
 	Given I navigate to the Amazon homepage
 	And I click on the menu "Toutes"
 	And I click on "Baromètre des ventes"
@@ -154,7 +154,7 @@ Feature: ‘amazon.fr’ Test Automation using Playwright
  	And I click on the first item
 	Then I should see the best selling item from the "CD et Vinyles" category
  
-### Scénario : Supprimer un article de l'historique de navigation
+### Scénario : Supprimer un article de l'historique de navigation => id : supprHisto
 	Given I am logged in and at the amazon homepage and I have searched for an article (we use the previous scenario)
 	When I hover the "Account" menu
 	And I click on the button "Vos recommandations"
