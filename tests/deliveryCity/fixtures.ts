@@ -7,7 +7,7 @@ type Fixtures = {
 };
 
 export const test = base.extend<Fixtures>({
-    // Initialisation de la fixture "changeCity"
+    // Initialisation de la fixture "nearestLocker"
     changeCity: async ({ page }, use) => {
         const cityChanger = new changeCity(page);
         await use(cityChanger);

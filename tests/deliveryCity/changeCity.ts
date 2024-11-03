@@ -21,9 +21,9 @@ export class changeCity {
         await this.changeCityButton.click();
         await expect(this.postalCodeInput).toBeVisible();
         await this.postalCodeInput.fill("59000");
+        await this.page.waitForTimeout(5000);
         await this.reloadButton.click();
         await this.page.waitForTimeout(5000);
-        console.log(await this.postalCode.innerText());
         return (await this.postalCode.innerText()).slice(0, 5);
     }
 }
