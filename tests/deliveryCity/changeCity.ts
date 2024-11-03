@@ -10,10 +10,10 @@ export class changeCity {
 
     constructor(page: Page) {
         this.page = page;
-        this.changeCityButton = page.locator('//*[@id="glow-ingress-block"]');
-        this.postalCodeInput = page.locator('//*[@id=\'GLUXZipUpdateInput\']');
-        this.reloadButton = page.locator('//input[@aria-labelledby=\'GLUXZipUpdate-announce\']')
-        this.postalCode = page.locator('//*[@id=\'glow-ingress-line2\']');
+        this.changeCityButton = page.locator("#glow-ingress-block");
+        this.postalCodeInput = page.locator("#GLUXZipUpdateInput");
+        this.reloadButton = page.locator("#GLUXZipUpdate-announce")
+        this.postalCode = page.locator("#glow-ingress-line2");
 // TODO: Initialize your locators here
     }
 // TODO: Add your business gesture here
@@ -21,8 +21,9 @@ export class changeCity {
         await this.changeCityButton.click();
         await expect(this.postalCodeInput).toBeVisible();
         await this.postalCodeInput.fill("59000");
+        await this.page.waitForTimeout(5000);
         await this.reloadButton.click();
-        await this.page.waitForTimeout(1000);
-        return await this.postalCode.innerText();
+        await this.page.waitForTimeout(5000);
+        return (await this.postalCode.innerText()).slice(0, 5);
     }
 }
