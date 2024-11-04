@@ -15,7 +15,7 @@ export class FilterRecent {
     }
 
     async gotoProductPage() {
-        await this.page.goto('https://www.amazon.fr/Oral-B-Ultimate-Brossette-%C3%89lectrique-Convient/dp/B0B1DV8KG8/ref=cm_cr_arp_d_product_top?ie=UTF8');
+        await this.page.goto('https://amzn.eu/d/17ag7TG');
         await this.page.getByLabel('Accepter').click();
     }
 
