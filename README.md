@@ -224,3 +224,28 @@ Feature: ‘amazon.fr’ Test Automation using Playwright
 	Then I should only be redirected on the CGU special link
 
 
+## Roméo
+
+### Scenario: Filtrer les avis avec 4 étoiles
+	Given the user is on the product reviews page
+	When the user selects the 4-star reviews filter
+	Then only reviews with 4 stars should be displayed
+	And the indicator for the 4-star filter should be activated
+
+
+### Scenario: Partager un produit et copier le lien
+    	Given the user is on the product detail page
+	When the user clicks on the "Share" button
+	And selects the "Copy link" option
+	Then the product link should be copied to the clipboard
+	And a confirmation message saying "Link copied" should be displayed
+
+
+### Scenario: Filtrer les commentaires avec le mot-clé "excellent"
+    	Given the user is on the product reviews page
+	When the user enters "excellent" in the review search field
+	And clicks the search button
+	Then only comments containing the word "excellent" should be displayed
+	And the keyword "excellent" should be highlighted in each displayed comment
+
+
