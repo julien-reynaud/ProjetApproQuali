@@ -198,3 +198,29 @@ Feature: ‘amazon.fr’ Test Automation using Playwright
   	And I enter the postal code in the input area
    	And I click on the button "Actualiser"
     	Then the postal should be write at the place of "Mettre à jour l'emplacement"
+
+## Corentin
+### Scenario: Remove a product from the cart 
+  	Given I have a product in my cart 
+	When I navigate to the cart page 
+	And I click on the "Remove" button next to the product 
+	Then the product should be removed from the cart 
+
+ 
+
+### Scenario: Apply filters in a category 
+	Given I navigate to the "Books" category page 
+	When I apply a filter for "Hardcover" books 
+	Then I should only see hardcover books in the product list 
+
+### Scenario: Possibility to access to a Pro Account
+	Given I navigate to the login page 
+	When I click on "Create a Professional Account"
+	Then I should only be redirected on the Pro Account section
+
+### Scenario: Possibility to access to CGU
+	Given I navigate to the login page 
+	When I click on "Consulter les Conditions Genérales d'Utilisation"
+	Then I should only be redirected on the CGU special link
+
+
