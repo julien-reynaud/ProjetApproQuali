@@ -9,7 +9,7 @@ type Fixtures = {
 export const test = base.extend<Fixtures>({
     // Initialisation de la fixture "nearestLocker"
     ShareLink: async ({ page }, use) => {
-        const nearestLockerAmazon = new ShareLink(page);
-        await use(nearestLockerAmazon);
+        const shareLink = new ShareLink(page);
+        await use(shareLink);
     },
 });
