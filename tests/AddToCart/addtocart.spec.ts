@@ -7,14 +7,18 @@ test('Add a product to cart', async ({ page }) => {
     // Go to the page we need
     await productPage.goto();
 
-    // Refuse cookies
-    await productPage.refuseCookies();
+    // Refuse cookies if the button is present
+    if (await productPage.isCookiesButtonVisible()) {
+      await productPage.refuseCookies();
+    }
 
     // Add the product to the cart
     await productPage.addToCart();
 
-    // Refuse the warranty
-    await productPage.refuseWarranty();
+    // Refuse the warranty if the button is present
+    if (await productPage.isRefuseButtonWarrantyVisible()) {
+      await productPage.refuseWarranty();
+    }
 
     // Go to the cart
     await productPage.goToCart();
