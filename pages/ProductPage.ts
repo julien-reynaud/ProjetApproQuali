@@ -20,11 +20,7 @@ export class ProductPage {
   }
 
   async goto() {
-<<<<<<< HEAD
     await this.page.goto('https://www.amazon.fr/dp/B0CV4CDT3S?ref=cm_sw_r_cp_ud_dp_4705ANA495A7B4SZ0SBW&ref_=cm_sw_r_cp_ud_dp_4705ANA495A7B4SZ0SBW&social_share=cm_sw_r_cp_ud_dp_4705ANA495A7B4SZ0SBW&skipTwisterOG=1');
-=======
-    await this.page.goto("https://amzn.eu/d/9YMIcK5")
->>>>>>> b1cf7955fb79ec1f68d86bcc547b8ac268e4f8cc
   }
 
   async addToCart() {
